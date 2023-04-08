@@ -6,26 +6,86 @@ body{
   background-color: rgb(148, 153, 155);
   font-size: 20px;
   line-height: 1.15;
+  font-family: sans-serif;
 }
 
 h1{
   font-size: 60px;
   padding: 30px 0;
   text-align: center;
+  font-family: sans-serif;
 }
 
 h2{
   font-size: 40px;
+  font-family: sans-serif;
 }
 
-.skip:focus a,
-.skip:hover a {
+figcaption a {
+  color: rgb(115, 213, 226);
+}
+
+figcaption a:visited {
+  color: rgb(226, 157, 220);
+}
+
+figcaption a:hover {
   font-weight: bold;
+  font-family: sans-serif;
+}
+
+.lakegallery {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+.lakegallery img {
+  width: 33%;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 5px;
+  font-family: sans-serif;
+}
+
+
+
+.skip a:focus,
+.skip a:hover {
+  font-weight: bold;
+  color: rgb(24, 22, 151);
+  font-family: sans-serif;
 }
 
 .skip a {
   font-size: 24px;
+  font-family: sans-serif;
+  color: rgb(24, 22, 151);
 }
+
+.skip a {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.skip:focus-within a,
+.skip:hover a,
+.skip a:focus {
+  position: static;
+  top: auto;
+  left: auto;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+
+
+
 
 .bio {
   display: flex;
@@ -34,6 +94,7 @@ h2{
   flex-direction: column;
   text-align: center;
   font-size: 60px;
+  font-family: sans-serif;
 }
 
 .bio img {
@@ -63,6 +124,7 @@ nav a {
   display: block; 
   color: black;
   font-weight: bold;
+  font-family: sans-serif;
   text-decoration: none;
   padding: 5px 10px; 
 }
@@ -84,11 +146,8 @@ nav a:hover, a:focus{
 }
 
 
-*:focus {
-  border: 2px solid rgb(14, 14, 15);
-}
 
-.campusGallery {
+.campusgallery {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(autofit, minmax(200px, 1fr));
@@ -96,17 +155,18 @@ nav a:hover, a:focus{
   padding-bottom: 50px;
 }
 
-.campusGallery img {
+.campusgallery img {
   width: 100%;
   height: auto;
 }
 
-.campusGallery figure {
+.campusgallery figure {
   margin: 0;
 }
 
-.campusGallery figcaption {
+.campusgallery figcaption {
   font-size: 20px;
+  font-family: sans-serif;
   margin-top: 5px;
   line-height: 1.5;
   color: #fff;
@@ -116,13 +176,13 @@ nav a:hover, a:focus{
 }
 
 
-.projectsGallery {
+.projectsgallery {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
 
-.projectsGallery figure {
+.projectsgallery figure {
   margin: 0;
   width: 100%;
   max-width: 300px;
@@ -130,7 +190,7 @@ nav a:hover, a:focus{
   margin-bottom: 30px;
 }
 
-.projectsGallery img {
+.projectsgallery img {
   width: 100%;
   height: auto;
   display: block;
@@ -138,8 +198,9 @@ nav a:hover, a:focus{
   object-fit: cover;
   border-radius: 10px;
 }
-.projectsGallery figcaption {
+.projectsgallery figcaption {
   font-size: 20px;
+  font-family: sans-serif;
   margin-top: 5px;
   line-height: 1.5;
   color: #fff;
@@ -153,39 +214,41 @@ nav a:hover, a:focus{
 
 
 @media screen and (min-width: 768px) {
-  .campusGallery {
+  .campusgallery {
     grid-template-columns: repeat(autofit, minmax(250px, 1fr));
     gap: 30px;
   }
 
-  .campusGallery figure {
+  .campusgallery figure {
     margin: 0 10px;
   }
 
-  .campusGallery figcaption {
+  .campusgallery figcaption {
     margin-top: 5px;
     font-size: 18px;
+    font-family: sans-serif;
   }
 
   nav a {
     display: block; 
     color: black;
     font-weight: bold;
+    font-family: sans-serif;
     text-decoration: none;
     padding: 15px 20px; 
     font-size: 24px; 
   }
 
-  .projectsGallery {
+  .projectsgallery {
     justify-content: center;
   }
   
-  .projectsGallery figure {
+  .projectsgallery figure {
     margin-right: 15px;
     margin-bottom: 0;
   }
   
-  .projectsGallery figure:last-of-type {
+  .projectsgallery figure:last-of-type {
     margin-right: 0;
   }
 
@@ -193,18 +256,19 @@ nav a:hover, a:focus{
 }
 
 @media screen and (min-width: 1280px) {
-  .campusGallery {
+  .campusgallery {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 40px;
   }
 
-  .campusGallery figure {
+  .campusgallery figure {
     margin: 0 10px;
   }
 
-  .campusGallery figcaption {
+  .campusgallery figcaption {
     margin-top: 5px;
     font-size: 24px;
+    font-family: sans-serif;
   }
 
   nav li{
@@ -217,6 +281,7 @@ nav a:hover, a:focus{
     display: inline;
     color: black;
     font-weight: bold;
+    font-family: sans-serif;
     text-decoration: none; 
   }
   
@@ -237,7 +302,7 @@ nav a:hover, a:focus{
   }
 
 
-  .projectsGallery {
+  .projectsgallery {
     display: grid;
     text-align: center;
     grid-template-columns: repeat(3, minmax(400px, 1fr));
@@ -246,19 +311,20 @@ nav a:hover, a:focus{
     justify-items: center;
   }
   
-  .projectsGallery img {
+  .projectsgallery img {
     width: 100%;
     height: auto;
     grid-column: 1 / -1;
   }
   
-  .projectsGallery figure {
+  .projectsgallery figure {
     margin: 0;
     max-width: 350px;
   }
   
-  .projectsGallery figcaption {
+  .projectsgallery figcaption {
     font-size: 24px;
+    font-family: sans-serif;
     margin-top: 5px;
     line-height: 1.5;
     color: #fff;
